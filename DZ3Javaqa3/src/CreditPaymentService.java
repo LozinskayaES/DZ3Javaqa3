@@ -1,18 +1,14 @@
 public class CreditPaymentService {
 
 
-    public double calculate(double S, double P, double N) {
-        // S – сумма кредита
-        // P – размер годовой процентной ставки
-        // N – количество месяцев, в течение которых производятся выплаты
-        // Sе - аннуитетные платежи по кредитам производятся ежемесячно
+    public double calculate(double amountOfCredit, double annualInterestRate, double numberOfMonths) {        
 
-        P = P / 100;
-        N = N * 12;
+        annualInterestRate = annualInterestRate / 100;
+        numberOfMonths = numberOfMonths * 12;
 
-        double Se = S * P / 12 * Math.pow(1 + P / 12, N) / (Math.pow(1 + P / 12, N) - 1);
+        double AnnuityPayments = amountOfCredit * annualInterestRate / 12 * Math.pow(1 + annualInterestRate / 12, numberOfMonths) / (Math.pow(1 + annualInterestRate / 12, numberOfMonths) - 1);
 
-        return (int) Se;
+        return (int) AnnuityPayments;
 
     }
 }
