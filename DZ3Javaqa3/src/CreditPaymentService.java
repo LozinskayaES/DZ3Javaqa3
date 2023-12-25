@@ -6,9 +6,9 @@ public class CreditPaymentService {
         annualInterestRate = annualInterestRate / 100;
         numberOfMonths = numberOfMonths * 12;
 
-        double AnnuityPayments = amountOfCredit * annualInterestRate / 12 * Math.pow(1 + annualInterestRate / 12, numberOfMonths) / (Math.pow(1 + annualInterestRate / 12, numberOfMonths) - 1);
+        double annuityPayments = amountOfCredit * annualInterestRate / 12 * Math.pow(1 + annualInterestRate / 12, numberOfMonths) / (Math.pow(1 + annualInterestRate / 12, numberOfMonths) - 1);
 
-        return (int) AnnuityPayments;
+        return (int) annuityPayments;
 
     }
 }
