@@ -1,7 +1,7 @@
 public class CreditPaymentService {
 
 
-    public double calculate(double amountOfCredit, double annualInterestRate, double numberOfMonths) {
+    public double calculate(double amountOfCredit, double annualInterestRate, double numberOfMonths) {        
 
         annualInterestRate = annualInterestRate / 100;
         numberOfMonths = numberOfMonths * 12;
